@@ -2,8 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { link } from "fs";
-import { title } from "process";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +10,10 @@ const containerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, staggerChildren: 0.2 },
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.2,
+    },
   },
 };
 
@@ -21,7 +22,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const Features = () => {
+const FeaturesSection = () => {
   return (
     <motion.div
       initial="hidden"
@@ -35,32 +36,29 @@ const Features = () => {
           variants={itemVariants}
           className="text-3xl font-bold text-center mb-12 w-full sm:w-2/3 mx-auto"
         >
-          Quickly find your perfect home and car with our AI-powered search and
-          recommendation engine
+          Quickly find the home you want using our effective search filters!
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-12 xl:gap-16 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16">
           {[0, 1, 2].map((index) => (
             <motion.div key={index} variants={itemVariants}>
               <FeatureCard
                 imageSrc={`/landing-search${3 - index}.png`}
                 title={
                   [
-                    "trustworthy and reliable listings",
-                    "Browse Rentals with Confidence",
-                    "Simple and Efficient Search",
+                    "Trustworthy and Verified Listings",
+                    "Browse Rental Listings with Ease",
+                    "Simplify Your Rental Search with Advanced",
                   ][index]
                 }
                 description={
                   [
-                    "Discover verified listings with transparent reviews and ratings from previous tenants, ensuring you find a trustworthy home or car rental.",
-                    "get access to user reviews and ratings to make informed decisions about your next rental property or vehicle.",
-                    "find trustworthy listings quickly with our user-friendly interface and advanced filtering options.",
+                    "Discover the best rental options with user reviews and ratings.",
+                    "Get access to user reviews and ratings for a better understanding of rental options.",
+                    "Find trustworthy and verified rental listings to ensure a hassle-free experience.",
                   ][index]
                 }
-                linkText={
-                  ["explore homes", "Discover", "start searching"][index]
-                }
-                linkHref={["/explore", "/discover", "/search"][index]}
+                linkText={["Explore", "Search", "Discover"][index]}
+                linkHref={["/explore", "/search", "/discover"][index]}
               />
             </motion.div>
           ))}
@@ -87,13 +85,12 @@ const FeatureCard = ({
     <div className="p-4 rounded-lg mb-4 flex items-center justify-center h-48">
       <Image
         src={imageSrc}
-        alt={title}
         width={400}
         height={400}
-        className="w-full object-contain h-full"
+        className="w-full h-full object-contain"
+        alt={title}
       />
     </div>
-
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="mb-4">{description}</p>
     <Link
@@ -106,4 +103,4 @@ const FeatureCard = ({
   </div>
 );
 
-export default Features;
+export default FeaturesSection;

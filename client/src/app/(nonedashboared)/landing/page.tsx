@@ -1,14 +1,20 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import Features from "./Features";
+import FeaturesSection from "./FeaturesSection";
+import DiscoverSection from "./DiscoverSection";
+import CallToActionSection from "./CallToActionSection";
+import FooterSection from "./FooterSection";
 
-const LandingPage = () => {
+const Landing = () => {
   return (
     <div>
       <HeroSection />
-      <Features />
+      <FeaturesSection />
+      <DiscoverSection />
+      <CallToActionSection />
+      <FooterSection />
     </div>
   );
 };
 
-export default LandingPage;
+export default Landing;

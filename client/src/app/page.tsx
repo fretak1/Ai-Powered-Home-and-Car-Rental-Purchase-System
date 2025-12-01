@@ -1,5 +1,8 @@
 import Image from "next/image";
+import LandingPage from "./(nonedashboared)/landing/page";
 
 export default function Home() {
-  return <div>Home</div>;
+  return <div>
+    <LandingPage />
+  </div>;
 }
