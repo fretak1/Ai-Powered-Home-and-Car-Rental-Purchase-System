@@ -5,17 +5,21 @@ import CallToActionSection from "./(nonedashboared)/landing/CallToActionSection"
 import FooterSection from "./(nonedashboared)/landing/FooterSection";
 import FeaturesSection from "./(nonedashboared)/landing/FeaturesSection";
 import Landing from "./(nonedashboared)/landing/page";
-const landing = ()=>{
-return(
-  <div>
-<HeroSection/>
-<FeaturesSection/>
-<DiscoverSection/>
-<CallToActionSection/>
-<FooterSection/>
+import SignInForm from "./(auth)/login/page";
 
-  </div>
-);
+const landing = () => {
+  return (
+    <div>
+
+      <HeroSection />
+      <SignInForm />
+      <FeaturesSection />
+      <DiscoverSection />
+      <CallToActionSection />
+      <FooterSection />
+
+    </div>
+  );
 
 };
 export default Landing;

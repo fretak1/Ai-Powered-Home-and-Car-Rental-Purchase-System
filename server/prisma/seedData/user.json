@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "passwordHash": "$2b$10$hashedpassword1",
+    "role": "admin",
+    "verified": true,
+    "phoneNumber": "+1-555-111-2222",
+    "profileImageUrl": "https://example.com/profiles/john.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Alice Brown",
+    "email": "alice.brown@example.com",
+    "passwordHash": "$2b$10$hashedpassword2",
+    "role": "customer",
+    "verified": true,
+    "phoneNumber": "+1-555-333-4444",
+    "profileImageUrl": "https://example.com/profiles/alice.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bob Green",
+    "email": "bob.green@example.com",
+    "passwordHash": "$2b$10$hashedpassword3",
+    "role": "customer",
+    "verified": false
+  },
+  {
+    "id": 4,
+    "name": "Carol White",
+    "email": "carol.white@example.com",
+    "passwordHash": "$2b$10$hashedpassword4",
+    "role": "manager",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "David Lee",
+    "email": "david.lee@example.com",
+    "passwordHash": "$2b$10$hashedpassword5",
+    "role": "manager",
+    "verified": true
+  },
+  {
+    "id": 6,
+    "name": "Emma Taylor",
+    "email": "emma.taylor@example.com",
+    "passwordHash": "$2b$10$hashedpassword6",
+    "role": "customer",
+    "verified": false
+  }
+]
