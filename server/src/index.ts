@@ -8,7 +8,7 @@ import authRoutes from "./router/authRoutes.js";
 import customerRoutes from "./router/customerRoutes.js";
 import providerRoutes from "./router/providerRoutes.js";
 import { authenticateJwt } from "./middleware/authMiddleware.js";
-
+import propertyRoutes from "./router/propertyRoutes.js";
 dotenv.config();
 const app = express();
 
@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
     res.send("this is home route");
 });
 
+app.use("/proberties",propertyRoutes);
 app.use("/customer", authenticateJwt(['customer']), customerRoutes);
 app.use("/provider", authenticateJwt(['provider']), providerRoutes);
 
